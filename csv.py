@@ -2,12 +2,13 @@
 # David Zacek
 filename = 'tabulka.csv'
 
-def view():
+def readcsv():
     with open(filename, 'r', encoding='utf-8') as f:
-        content = f.read()
-    print(content)
+        lines = f.readlines()
+    for line in lines:
+        print('\t'.join(line.strip().split(',')))
 
-def edit():
+def writecsv():
     name = input('Zadej jmeno:')
     surname = input('Zadej prijmeni:')
     yob = input('Zadej datum narozeni:')
@@ -22,9 +23,9 @@ if __name__ == '__main__':
     action = input('>>')
     print(action)
     if action == '1':
-        view()
+        readcsv()
     elif action == '2':
-        edit()
+        writecsv()
     else:
         print('\n Spatne, cau')
         exit()
