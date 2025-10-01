@@ -1,7 +1,4 @@
-# Seminar3
+# Seminar Informatiky
 
-## Nadpis
+## David Zacek
 
-Prvni lokalni uprava
-
-Prvni online uprava
